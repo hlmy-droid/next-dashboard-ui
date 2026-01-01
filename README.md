@@ -2,7 +2,38 @@
 
 ## Getting Started
 
-First, run the development server:
+### PostgreSQL Database Setup
+
+This project uses PostgreSQL running in Docker. The database is configured via Docker Compose.
+
+**Start the database:**
+```bash
+docker-compose up -d
+```
+
+**Stop the database:**
+```bash
+docker-compose stop
+```
+
+**Reset the database (deletes all data):**
+```bash
+docker-compose down -v
+```
+
+**Database Connection Details:**
+- Host: `localhost`
+- Port: `5432`
+- Database: `dashboard`
+- User: `postgres`
+- Password: `postgres`
+- Connection URL: `postgresql://postgres:postgres@localhost:5432/dashboard`
+
+Environment variables are configured in `.env.local`
+
+### Development Server
+
+Run the development server:
 
 ```bash
 npm run dev
